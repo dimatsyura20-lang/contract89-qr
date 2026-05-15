@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#071624" />
+  <title>Служба по контракту — ЯНАО</title>
+  <meta name="description" content="Служба по контракту в ЯНАО. Актуальные выплаты, проезд в Ноябрьск, проживание, питание и быстрые способы связи." />
+
+  <meta property="og:title" content="Служба по контракту — ЯНАО" />
+  <meta property="og:description" content="Актуальные выплаты, проезд в Ноябрьск, проживание, питание и быстрые способы связи." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      overflow-x: hidden;
+      background: #071624;
+    }
+
+    .c89-redirect-page {
+      min-height: 100vh;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at top left, rgba(186,155,54,.20), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(34,158,217,.16), transparent 36%),
+        linear-gradient(135deg, #071624 0%, #0b2235 100%);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+
+    .c89-redirect-page * {
+      box-sizing: border-box;
+    }
+
+    .c89-card {
+      width: 100%;
+      max-width: 560px;
+      padding: 26px 20px 22px;
+      border-radius: 30px;
+      background: #ffffff;
+      box-shadow: 0 24px 70px rgba(0,0,0,.34);
+      text-align: center;
+    }
+
+    .c89-logo {
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 14px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #0b2b44 0%, #071b2c 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 22px;
+      border-bottom: 4px solid #ba9b36;
+    }
+
+    .c89-title {
+      margin: 0;
+      color: #112f47;
+      font-size: 26px;
+      line-height: 1.05;
+      font-weight: 950;
+      letter-spacing: -.035em;
+      text-transform: uppercase;
+    }
+
+    .c89-text {
+      margin: 12px auto 0;
+      max-width: 380px;
+      color: #536879;
+      font-size: 15px;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
+    .c89-loader {
+      width: 42px;
+      height: 42px;
+      margin: 20px auto 0;
+      border-radius: 50%;
+      border: 4px solid #e8eef6;
+      border-top-color: #3457ff;
+      animation: c89spin .8s linear infinite;
+    }
+
+    @keyframes c89spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .c89-fallback {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .c89-fallback.is-visible {
+      display: block;
+    }
+
+    .c89-note {
+      margin: 0 0 14px;
+      color: #6b7e8e;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .c89-actions {
+      display: grid;
+      gap: 10px;
+    }
+
+    .c89-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      color: #ffffff !important;
+      text-decoration: none !important;
+      font-size: 15px;
+      line-height: 1.2;
+      font-weight: 850;
+      box-shadow: 0 10px 24px rgba(0,0,0,.12);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .c89-btn small {
+      display: block;
+      margin-top: 3px;
+      font-size: 11px;
+      line-height: 1.25;
+      font-weight: 650;
+      opacity: .88;
+    }
+
+    .c89-btn--max {
+      background: #3457ff;
+    }
+
+    .c89-btn--tg {
+      background: #229ED9;
+    }
+
+    .c89-btn--wa {
+      background: #25D366;
+    }
+
+    .c89-btn--phone {
+      background: #244f2b;
+    }
+
+    .c89-btn--site {
+      background: #1c2f41;
+    }
+
+    .c89-info-grid {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .c89-info-box {
+      padding: 14px;
+      border-radius: 22px;
+      background: #f4f7fb;
+      border: 1px solid #e8eef6;
+      text-align: left;
+    }
+
+    .c89-info-box--accent {
+      background: #fff8df;
+      border-color: rgba(186,155,54,.35);
+    }
+
+    .c89-info-title {
+      margin: 0 0 8px;
+      color: #17334a;
+      font-size: 12px;
+      line-height: 1.3;
+      font-weight: 950;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .c89-info-box ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #28445c;
+      font-size: 13px;
+      line-height: 1.45;
+      font-weight: 650;
+    }
+
+    .c89-info-box li + li {
+      margin-top: 4px;
+    }
+
+    .c89-footer {
+      margin-top: 14px;
+      color: #7b8ea0;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    @media (min-width: 560px) {
+      .c89-card {
+        max-width: 620px;
+        padding: 34px;
+      }
+
+      .c89-title {
+        font-size: 34px;
+      }
+
+      .c89-actions {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .c89-btn--max,
+      .c89-btn--site {
+        grid-column: 1 / -1;
+      }
+
+      .c89-info-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .c89-redirect-page {
+        padding: 12px;
+      }
+
+      .c89-card {
+        border-radius: 24px;
+        padding: 22px 14px 18px;
+      }
+
+      .c89-title {
+        font-size: 23px;
+      }
+
+      .c89-text {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="c89-redirect-page">
+    <div class="c89-card">
+      <div class="c89-logo">89</div>
+
+      <h1 class="c89-title">Открываем чат</h1>
+
+      <p class="c89-text">
+        Сейчас попробуем открыть MAX-бота с информацией о службе по контракту.
+      </p>
+
+      <div class="c89-loader" aria-hidden="true"></div>
+
+      <div class="c89-fallback" id="c89Fallback">
+        <p class="c89-note">
+          Если чат не открылся автоматически, выберите удобный способ связи:
+        </p>
+
+        <div class="c89-actions">
+          <a class="c89-btn c89-btn--max" href="https://max.ru/svo_yanao_bot?start=qr_contract" target="_blank" rel="noopener noreferrer">
+            <span>Открыть в MAX<small>@svo_yanao_bot</small></span>
+          </a>
+
+          <a class="c89-btn c89-btn--tg" href="https://t.me/Contract89_bot" target="_blank" rel="noopener noreferrer">
+            <span>Telegram<small>@Contract89_bot</small></span>
+          </a>
+
+          <a class="c89-btn c89-btn--wa" href="https://wa.me/79937997176?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%81%D1%8C%20%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D0%BE%D0%B9%20%D0%BF%D0%BE%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%D1%83%20%D0%BE%D1%82%20%D0%AF%D0%9D%D0%90%D0%9E" target="_blank" rel="noopener noreferrer">
+            <span>WhatsApp<small>+7 993 799-71-76</small></span>
+          </a>
+
+          <a class="c89-btn c89-btn--phone" href="tel:+79222655860">
+            <span>Позвонить<small>+7 922 265-58-60</small></span>
+          </a>
+
+          <a class="c89-btn c89-btn--site" href="https://contract89.ru" target="_blank" rel="noopener noreferrer">
+            <span>Основной сайт<small>contract89.ru</small></span>
+          </a>
+        </div>
+
+        <div class="c89-info-grid">
+          <div class="c89-info-box c89-info-box--accent">
+            <p class="c89-info-title">Актуальные выплаты</p>
+            <ul>
+              <li>до 4 000 000 ₽ единовременно;</li>
+              <li>от 230 000 ₽ ежемесячно в зоне СВО;</li>
+              <li>до 6 700 000 ₽ годовой доход.</li>
+            </ul>
+          </div>
+
+          <div class="c89-info-box">
+            <p class="c89-info-title">Дополнительно</p>
+            <ul>
+              <li>оплата проезда в Ноябрьск;</li>
+              <li>бесплатное проживание;</li>
+              <li>бесплатное питание на период оформления.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="c89-footer">
+          Информация носит справочный характер. Подробные условия уточняйте у специалистов.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      var maxLink = 'https://max.ru/svo_yanao_bot?start=qr_contract';
+      var fallback = document.getElementById('c89Fallback');
+
+      function showFallback() {
+        if (fallback) {
+          fallback.classList.add('is-visible');
+        }
+      }
+
+      function isMobileDevice() {
+        return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      }
+
+      /*
+        На телефонах пробуем открыть MAX.
+        Если MAX не открылся, человек остаётся на странице и видит запасные кнопки.
+        На ПК сразу показываем кнопки, чтобы браузер не прыгал в никуда.
+      */
+
+      if (isMobileDevice()) {
+        setTimeout(function () {
+          window.location.href = maxLink;
+        }, 350);
+
+        setTimeout(showFallback, 1500);
+      } else {
+        showFallback();
+      }
+
+      document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState === 'visible') {
+          setTimeout(showFallback, 400);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
