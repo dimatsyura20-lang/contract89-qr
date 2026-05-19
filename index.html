@@ -12,6 +12,13 @@
   <meta property="og:description" content="Актуальные выплаты, проезд в Ноябрьск, проживание, питание и быстрые способы связи." />
   <meta property="og:type" content="website" />
 
+  <!-- Иконка вкладки: военная звезда -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Crect width="64" height="64" rx="14" fill="%23071624"/%3E%3Cpath d="M32 6l6.9 17.2 18.5 1.3-14.2 11.9 4.5 18-15.7-9.9-15.7 9.9 4.5-18L6.6 24.5l18.5-1.3L32 6z" fill="%23d9b84f"/%3E%3Cpath d="M32 15l4.2 10.6 11.4.8-8.8 7.3 2.8 11.1-9.6-6.1-9.6 6.1 2.8-11.1-8.8-7.3 11.4-.8L32 15z" fill="%23ffffff" opacity=".18"/%3E%3C/svg%3E'
+  />
+
   <style>
     html,
     body {
@@ -42,7 +49,7 @@
 
     .c89-card {
       width: 100%;
-      max-width: 560px;
+      max-width: 600px;
       padding: 26px 20px 22px;
       border-radius: 30px;
       background: #ffffff;
@@ -59,10 +66,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #ffffff;
+      color: #d9b84f;
       font-weight: 900;
-      font-size: 22px;
+      font-size: 31px;
       border-bottom: 4px solid #ba9b36;
+      line-height: 1;
     }
 
     .c89-title {
@@ -77,7 +85,7 @@
 
     .c89-text {
       margin: 12px auto 0;
-      max-width: 380px;
+      max-width: 410px;
       color: #536879;
       font-size: 15px;
       line-height: 1.45;
@@ -95,9 +103,7 @@
     }
 
     @keyframes c89spin {
-      to {
-        transform: rotate(360deg);
-      }
+      to { transform: rotate(360deg); }
     }
 
     .c89-fallback {
@@ -114,6 +120,17 @@
       color: #6b7e8e;
       font-size: 13px;
       line-height: 1.4;
+    }
+
+    .c89-section-title {
+      margin: 18px 0 10px;
+      color: #17334a;
+      font-size: 12px;
+      line-height: 1.3;
+      font-weight: 950;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      text-align: center;
     }
 
     .c89-actions {
@@ -135,6 +152,12 @@
       font-weight: 850;
       box-shadow: 0 10px 24px rgba(0,0,0,.12);
       -webkit-tap-highlight-color: transparent;
+      transition: transform .18s ease, filter .18s ease;
+    }
+
+    .c89-btn:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.03);
     }
 
     .c89-btn small {
@@ -150,12 +173,8 @@
       background: #3457ff;
     }
 
-    .c89-btn--tg {
-      background: #229ED9;
-    }
-
-    .c89-btn--wa {
-      background: #25D366;
+    .c89-btn--max-person {
+      background: #273fc7;
     }
 
     .c89-btn--phone {
@@ -218,7 +237,7 @@
 
     @media (min-width: 560px) {
       .c89-card {
-        max-width: 620px;
+        max-width: 660px;
         padding: 34px;
       }
 
@@ -230,8 +249,7 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .c89-btn--max,
-      .c89-btn--site {
+      .c89-btn--wide {
         grid-column: 1 / -1;
       }
 
@@ -264,7 +282,7 @@
 <body>
   <main class="c89-redirect-page">
     <div class="c89-card">
-      <div class="c89-logo">89</div>
+      <div class="c89-logo">★</div>
 
       <h1 class="c89-title">Открываем чат</h1>
 
@@ -280,23 +298,35 @@
         </p>
 
         <div class="c89-actions">
-          <a class="c89-btn c89-btn--max" href="https://max.ru/svo_yanao_bot?start=qr_contract" target="_blank" rel="noopener noreferrer">
-            <span>Открыть в MAX<small>@svo_yanao_bot</small></span>
+          <a class="c89-btn c89-btn--max c89-btn--wide" href="https://max.ru/svo_yanao_bot?start=qr_contract" target="_blank" rel="noopener noreferrer">
+            <span>Открыть MAX-бота<small>@svo_yanao_bot</small></span>
+          </a>
+        </div>
+
+        <p class="c89-section-title">MAX — личные сообщения</p>
+
+        <div class="c89-actions">
+          <a class="c89-btn c89-btn--max-person" href="https://max.ru/+79124323828" target="_blank" rel="noopener noreferrer">
+            <span>Написать в MAX<small>+7 912 432-38-28</small></span>
           </a>
 
-          <a class="c89-btn c89-btn--tg" href="https://t.me/Contract89_bot" target="_blank" rel="noopener noreferrer">
-            <span>Telegram<small>@Contract89_bot</small></span>
+          <a class="c89-btn c89-btn--max-person" href="https://max.ru/+79937997176" target="_blank" rel="noopener noreferrer">
+            <span>Написать в MAX<small>+7 993 799-71-76</small></span>
+          </a>
+        </div>
+
+        <p class="c89-section-title">Позвонить</p>
+
+        <div class="c89-actions">
+          <a class="c89-btn c89-btn--phone" href="tel:+79124323828">
+            <span>Позвонить<small>+7 912 432-38-28</small></span>
           </a>
 
-          <a class="c89-btn c89-btn--wa" href="https://wa.me/79937997176?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%81%D1%8C%20%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D0%BE%D0%B9%20%D0%BF%D0%BE%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%D1%83%20%D0%BE%D1%82%20%D0%AF%D0%9D%D0%90%D0%9E" target="_blank" rel="noopener noreferrer">
-            <span>WhatsApp<small>+7 993 799-71-76</small></span>
+          <a class="c89-btn c89-btn--phone" href="tel:+79937997176">
+            <span>Позвонить<small>+7 993 799-71-76</small></span>
           </a>
 
-          <a class="c89-btn c89-btn--phone" href="tel:+79222655860">
-            <span>Позвонить<small>+7 922 265-58-60</small></span>
-          </a>
-
-          <a class="c89-btn c89-btn--site" href="https://contract89.ru" target="_blank" rel="noopener noreferrer">
+          <a class="c89-btn c89-btn--site c89-btn--wide" href="https://contract89.ru" target="_blank" rel="noopener noreferrer">
             <span>Основной сайт<small>contract89.ru</small></span>
           </a>
         </div>
@@ -330,7 +360,7 @@
 
   <script>
     (function () {
-      var maxLink = 'https://max.ru/svo_yanao_bot?start=qr_contract';
+      var maxBotLink = 'https://max.ru/svo_yanao_bot?start=qr_contract';
       var fallback = document.getElementById('c89Fallback');
 
       function showFallback() {
@@ -344,14 +374,14 @@
       }
 
       /*
-        На телефонах пробуем открыть MAX.
+        На телефонах пробуем открыть MAX-бота.
         Если MAX не открылся, человек остаётся на странице и видит запасные кнопки.
-        На ПК сразу показываем кнопки, чтобы браузер не прыгал в никуда.
+        На ПК сразу показываем кнопки.
       */
 
       if (isMobileDevice()) {
         setTimeout(function () {
-          window.location.href = maxLink;
+          window.location.href = maxBotLink;
         }, 350);
 
         setTimeout(showFallback, 1500);
